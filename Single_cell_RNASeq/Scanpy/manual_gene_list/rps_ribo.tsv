@@ -1,0 +1,28 @@
+NCBI GeneID	Symbol	Description	Taxonomic Name	Common Name	Gene Type	Transcripts	Gene Group Identifier	Gene Group Method	Annotation Genomic Range Accession 	Annotation Genomic Range Start	Annotation Genomic Range Stop
+110488520	rps27.1	ribosomal protein S27	Oncorhynchus mykiss	rainbow trout	PROTEIN_CODING	1	554155	NCBI Ortholog	NC_050572.1	39396631	39398852
+110521070	rps6kc1	ribosomal protein S6 kinase polypeptide 1	Oncorhynchus mykiss	rainbow trout	PROTEIN_CODING	2	26750	NCBI Ortholog	NC_048568.1	23235315	23287385
+110505267	rps6ka1	ribosomal protein S6 kinase a, polypeptide 1	Oncorhynchus mykiss	rainbow trout	PROTEIN_CODING	3	777728	NCBI Ortholog	NC_048589.1	6224156	6338282
+100136044	rps20	ribosomal protein S20	Oncorhynchus mykiss	rainbow trout	PROTEIN_CODING	1	6224	NCBI Ortholog	NC_048579.1	24741899	24743792
+100136056	rps8a	ribosomal protein S8a	Oncorhynchus mykiss	rainbow trout	PROTEIN_CODING	1	6202	NCBI Ortholog	NC_048572.1	89951111	89957717
+100136101	rps24	ribosomal protein S24	Oncorhynchus mykiss	rainbow trout	PROTEIN_CODING	4	6229	NCBI Ortholog	NC_048565.1	81538351	81542584
+110490463	rps16	ribosomal protein S16	Oncorhynchus mykiss	rainbow trout	PROTEIN_CODING	3			NC_048579.1	59420259	59424316
+110492702	rps21	ribosomal protein S21	Oncorhynchus mykiss	rainbow trout	PROTEIN_CODING	1			NC_048580.1	74172959	74182639
+110496245	rps18	ribosomal protein S18	Oncorhynchus mykiss	rainbow trout	PROTEIN_CODING	2	6222	NCBI Ortholog	NC_048582.1	40469109	40471565
+110497379	rps3a	ribosomal protein S3A	Oncorhynchus mykiss	rainbow trout	PROTEIN_CODING	1			NC_048583.1	12272812	12276920
+110497610	rps6ka5	ribosomal protein S6 kinase, polypeptide 5	Oncorhynchus mykiss	rainbow trout	PROTEIN_CODING	3	9252	NCBI Ortholog	NC_048583.1	27733126	27769591
+110502718	rps6ka2	ribosomal protein S6 kinase, polypeptide 2	Oncorhynchus mykiss	rainbow trout	PROTEIN_CODING	2			NC_048587.1	39395982	39447726
+110503803	rps3	ribosomal protein S3	Oncorhynchus mykiss	rainbow trout	PROTEIN_CODING	1	6188	NCBI Ortholog	NC_048588.1	13996252	14001729
+110508756	rps9	ribosomal protein S9	Oncorhynchus mykiss	rainbow trout	PROTEIN_CODING	1	6203	NCBI Ortholog	NC_048567.1	10074725	10077392
+110529819	rps7	ribosomal protein S7	Oncorhynchus mykiss	rainbow trout	PROTEIN_CODING	1	6201	NCBI Ortholog	NC_048572.1	32682432	32686606
+110534813	rps6kal	ribosomal protein S6 kinase a, like	Oncorhynchus mykiss	rainbow trout	PROTEIN_CODING	5	337670	NCBI Ortholog	NC_048578.1	42947991	43016845
+110537477	rps6kb1a	ribosomal protein S6 kinase b, polypeptide 1a	Oncorhynchus mykiss	rainbow trout	PROTEIN_CODING	3			NC_048576.1	33625763	33637546
+110537987	rps19	ribosomal protein S19	Oncorhynchus mykiss	rainbow trout	PROTEIN_CODING	1			NC_048566.1	22525184	22531056
+100135859	LOC100135859	S6 ribosomal protein	Oncorhynchus mykiss	rainbow trout	PROTEIN_CODING	1			NC_048583.1	22221848	22225274
+110488339	LOC110488339	40S ribosomal protein S18	Oncorhynchus mykiss	rainbow trout	PROTEIN_CODING	1			NC_050572.1	33061342	33063849
+110529255	LOC110529255	ribosomal protein S12	Oncorhynchus mykiss	rainbow trout	PROTEIN_CODING	1			NC_048572.1	2947015	2957275
+110491972	LOC110491972	ribosomal protein S26	Oncorhynchus mykiss	rainbow trout	PROTEIN_CODING	1	336662	NCBI Ortholog	NC_048580.1	40852817	40854671
+110508919	LOC110508919	ribosomal protein S28	Oncorhynchus mykiss	rainbow trout	PROTEIN_CODING	1			NC_048592.1	30442013	30447448
+110516962	rps12	ribosomal protein S12	Oncorhynchus mykiss	rainbow trout	PROTEIN_CODING	1	6206	NCBI Ortholog	NC_048568.1	43286652	43291268
+110532705	LOC110532705	ribosomal protein S26	Oncorhynchus mykiss	rainbow trout	PROTEIN_CODING	1			NC_048573.1	65669353	65671453
+110505538	LOC110505538	ribosomal protein S6 kinase delta-1	Oncorhynchus mykiss	rainbow trout	PROTEIN_CODING	8			NC_048589.1	19908000	19917607
+110530120	rps28	ribosomal protein S28	Oncorhynchus mykiss	rainbow trout	PROTEIN_CODING	1	6234	NCBI Ortholog	NC_048572.1	53926018	53927959

@@ -1,0 +1,50 @@
+NCBI GeneID	Symbol	Description	Taxonomic Name	Common Name	Gene Type	Transcripts	Gene Group Identifier	Gene Group Method	Annotation Genomic Range Accession 	Annotation Genomic Range Start	Annotation Genomic Range Stop
+100301693	hbae4	hemoglobin alpha embryonic-4	Oncorhynchus mykiss	rainbow trout	PROTEIN_CODING	1	563335	NCBI Ortholog	NC_048584.1	22561449	22562880
+100301726	hbb1	Hemoglobin subunit beta-1	Oncorhynchus mykiss	rainbow trout	PROTEIN_CODING	1			NC_048576.1	73582572	73583523
+100136291	LOC100136291	beta-globin	Oncorhynchus mykiss	rainbow trout	PROTEIN_CODING	1			NC_048577.1	40576326	40577151
+100136297	hba1	hemoglobin, alpha 1	Oncorhynchus mykiss	rainbow trout	PROTEIN_CODING	1			NC_048576.1	73585417	73586189
+100301735	hba4	Hemoglobin subunit alpha-4	Oncorhynchus mykiss	rainbow trout	PROTEIN_CODING	1			NC_048576.1	73601060	73601971
+110486354	LOC110486354	hemoglobin subunit alpha	Oncorhynchus mykiss	rainbow trout	PROTEIN_CODING	1			NC_048577.1	40572568	40573483
+110486351	LOC110486351	hemoglobin subunit alpha	Oncorhynchus mykiss	rainbow trout	PROTEIN_CODING	1			NC_048577.1	40534711	40535614
+110538446	LOC110538446	hemoglobin subunit beta-1-like	Oncorhynchus mykiss	rainbow trout	PROTEIN_CODING	1			NC_048576.1	73560334	73561279
+110538451	LOC110538451	hemoglobin subunit alpha	Oncorhynchus mykiss	rainbow trout	PROTEIN_CODING	1			NC_048576.1	73562501	73563404
+110538443	LOC110538443	hemoglobin subunit beta	Oncorhynchus mykiss	rainbow trout	PROTEIN_CODING	1			NC_048576.1	73617111	73618238
+110486353	LOC110486353	hemoglobin subunit alpha-4-like	Oncorhynchus mykiss	rainbow trout	PROTEIN_CODING	1			NC_048577.1	40540811	40541737
+110486355	LOC110486355	hemoglobin embryonic subunit alpha	Oncorhynchus mykiss	rainbow trout	PROTEIN_CODING	1			NC_048577.1	40622959	40623862
+110486356	LOC110486356	hemoglobin subunit beta	Oncorhynchus mykiss	rainbow trout	PROTEIN_CODING	1			NC_048577.1	40627548	40628386
+110499167	LOC110499167	hemoglobin subunit beta-2	Oncorhynchus mykiss	rainbow trout	PROTEIN_CODING	1			NC_048584.1	22571727	22572592
+110538450	LOC110538450	hemoglobin subunit alpha-4-like	Oncorhynchus mykiss	rainbow trout	PROTEIN_CODING	1			NC_048576.1	73568810	73569803
+110538444	LOC110538444	hemoglobin subunit beta	Oncorhynchus mykiss	rainbow trout	PROTEIN_CODING	1			NC_048576.1	73566045	73567109
+110538449	LOC110538449	hemoglobin subunit alpha-1-like	Oncorhynchus mykiss	rainbow trout	PROTEIN_CODING	1			NC_048576.1	73608654	73613476
+100136207	LOC100136207	hemoglobin subunit beta-1-like	Oncorhynchus mykiss	rainbow trout	PROTEIN_CODING	1			NC_048577.1	40569835	40570915
+110486350	LOC110486350	hemoglobin subunit beta-1-like	Oncorhynchus mykiss	rainbow trout	PROTEIN_CODING	1			NC_048577.1	40532802	40533721
+110486352	LOC110486352	hemoglobin subunit beta	Oncorhynchus mykiss	rainbow trout	PROTEIN_CODING	1			NC_048577.1	40538054	40539112
+110538445	LOC110538445	hemoglobin subunit beta	Oncorhynchus mykiss	rainbow trout	PROTEIN_CODING	2			NC_048576.1	73595266	73599921
+110538447	LOC110538447	hemoglobin subunit alpha-4-like	Oncorhynchus mykiss	rainbow trout	PROTEIN_CODING	1			NC_048576.1	73619244	73620456
+110538448	LOC110538448	hemoglobin subunit alpha-1-like	Oncorhynchus mykiss	rainbow trout	PROTEIN_CODING	1			NC_048576.1	73596585	73597588
+110486357	LOC110486357	hemoglobin subunit beta-like	Oncorhynchus mykiss	rainbow trout	PROTEIN_CODING	2			NC_048576.1	73640772	73641980
+110486358	LOC110486358	hemoglobin embryonic subunit alpha-like	Oncorhynchus mykiss	rainbow trout	PROTEIN_CODING	1			NC_048577.1	40612242	40613133
+110499168	LOC110499168	hemoglobin subunit alpha-2-like	Oncorhynchus mykiss	rainbow trout	PROTEIN_CODING	1			NC_048584.1	22600486	22601541
+110499592	LOC110499592	hemoglobin subunit alpha-1-like	Oncorhynchus mykiss	rainbow trout	PROTEIN_CODING	1			NC_048584.1	22574542	22575413
+110499593	LOC110499593	hemoglobin subunit alpha-1-like	Oncorhynchus mykiss	rainbow trout	PROTEIN_CODING	1			NC_048584.1	22591103	22591954
+110513323	LOC110513323	hemoglobin embryonic subunit alpha-like	Oncorhynchus mykiss	rainbow trout	PROTEIN_CODING	1			NC_048576.1	73650833	73651731
+110513784	LOC110513784	hemoglobin subunit beta-like	Oncorhynchus mykiss	rainbow trout	PROTEIN_CODING	1			NC_048576.1	73676632	73677673
+110538433	LOC110538433	hemoglobin embryonic subunit alpha-like	Oncorhynchus mykiss	rainbow trout	PROTEIN_CODING	1			NC_048576.1	73686626	73687501
+110538434	LOC110538434	hemoglobin embryonic subunit alpha-like	Oncorhynchus mykiss	rainbow trout	PSEUDO				NC_048576.1	73668763	73669683
+110538435	LOC110538435	hemoglobin subunit beta-like	Oncorhynchus mykiss	rainbow trout	PROTEIN_CODING	1			NC_048576.1	73666463	73667287
+110538436	LOC110538436	hemoglobin subunit beta-like	Oncorhynchus mykiss	rainbow trout	PROTEIN_CODING	1			NC_048576.1	73652866	73653837
+110538437	LOC110538437	hemoglobin subunit beta-like	Oncorhynchus mykiss	rainbow trout	PROTEIN_CODING	2			NC_048576.1	73628653	73629929
+110538438	LOC110538438	hemoglobin subunit beta-like	Oncorhynchus mykiss	rainbow trout	PROTEIN_CODING	2			NC_048576.1	73634721	73635984
+110538972	LOC110538972	hemoglobin subunit beta-like	Oncorhynchus mykiss	rainbow trout	PSEUDO				NC_048576.1	73658628	73659374
+110538973	LOC110538973	hemoglobin embryonic subunit alpha-like	Oncorhynchus mykiss	rainbow trout	PROTEIN_CODING	1			NC_048576.1	73656057	73656811
+118936252	LOC118936252	hemoglobin subunit beta-1	Oncorhynchus mykiss	rainbow trout	PROTEIN_CODING	3			NC_048576.1	73590430	73595413
+118936300	LOC118936300	hemoglobin subunit beta-like	Oncorhynchus mykiss	rainbow trout	PROTEIN_CODING	1			NC_048577.1	40614297	40615287
+118936354	LOC118936354	hemoglobin subunit beta-like	Oncorhynchus mykiss	rainbow trout	PROTEIN_CODING	1			NC_048577.1	40610279	40615060
+118937729	LOC118937729	hemoglobin embryonic subunit alpha-like	Oncorhynchus mykiss	rainbow trout	PROTEIN_CODING	1			NC_048576.1	73632683	73633582
+118937730	LOC118937730	hemoglobin embryonic subunit alpha-like	Oncorhynchus mykiss	rainbow trout	PROTEIN_CODING	1			NC_048576.1	73638739	73639637
+118937731	LOC118937731	hemoglobin embryonic subunit alpha-like	Oncorhynchus mykiss	rainbow trout	PROTEIN_CODING	1			NC_048576.1	73644710	73645608
+118937732	LOC118937732	hemoglobin subunit beta-like	Oncorhynchus mykiss	rainbow trout	PROTEIN_CODING	1			NC_048576.1	73684425	73685466
+118937733	LOC118937733	hemoglobin subunit beta-like	Oncorhynchus mykiss	rainbow trout	PROTEIN_CODING	1			NC_048576.1	73692246	73693301
+118937734	LOC118937734	hemoglobin embryonic subunit alpha-like	Oncorhynchus mykiss	rainbow trout	PROTEIN_CODING	1			NC_048576.1	73678826	73679713
+118937735	LOC118937735	hemoglobin embryonic subunit alpha-like	Oncorhynchus mykiss	rainbow trout	PROTEIN_CODING	1			NC_048576.1	73694424	73695320
+118942010	LOC118942010	hemoglobin subunit alpha-1-like	Oncorhynchus mykiss	rainbow trout	PROTEIN_CODING	1			NC_048584.1	22582816	22583667
