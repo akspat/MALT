@@ -1,0 +1,10 @@
+
+Bulk_RNASeq/fastp/*.gz
+Bulk_RNASeq/genome/*
+Bulk_RNASeq/hisat2/*.gz
+Bulk_RNASeq/samtools/*.gz
+Bulk_RNASeq/sra/*.gz
+Single_cell_RNASeq/Scanpy/adata_objects/adata_scvi_annotated.h5ad
+Single_cell_RNASeq/Cellbender/*.h5
+Single_cell_RNASeq/Scanpy/scvi_model/model.pt
+Single_cell_RNASeq/Scanpy/adata_object/adata_scvi_annotated.h5ad
