@@ -1,0 +1,226 @@
+
+```{r}
+library(edgeR)
+library(limma)
+library(pheatmap)
+library(dplyr)
+library(tidyr)
+library(ggplot2)
+library(readr)
+library(viridis)
+library(RColorBrewer)
+library(tibble)
+library(grid)
+```
+
+```{r}
+setwd("MALT/Bulk_RNASeq")
+
+```
+
+```{r}
+# Load data
+metadata     <- read.csv("samples_metadata.csv", stringsAsFactors = FALSE)
+count_matrix <- read.table("filtered_counts.txt", header = TRUE, row.names = 1, sep = "\t")
+
+```
+
+```{r}
+# Alignment of samples
+# Keep only samples present in both the count matrix and the metatable, then reorder fro consistency
+
+common_samples <- intersect(colnames(count_matrix), metadata$Sample)
+
+count_matrix <- count_matrix[, common_samples]
+
+metadata     <- metadata[match(common_samples, metadata$Sample), ]
+
+```
+
+
+```{r}
+# Normalize counts (TMM)
+# Trimmed Mean of M-values normalisation coorects for
+# differences in library composition across samples
+# Source: https://bio-protocol.org/exchange/protocoldetail?id=4462&type=1 
+
+dge    <- DGEList(counts = count_matrix)
+dge    <- calcNormFactors(dge, method = "TMM")
+logcpm <- cpm(dge, normalized.lib.sizes = TRUE, log = TRUE)
+```
+
+```{r}
+# Batch correction
+# Remove variation attributable to BioProject (sequecning batch)
+# while preserving the biological signal of Tissue.
+
+logcpm_corrected <- removeBatchEffect(logcpm, batch = metadata$Bioproject, design = model.matrix(~metadata$Tissue))
+ 
+```
+
+```{r}
+target_data <- logcpm_corrected[c("malt1", "malt2", "malt3"), , drop = FALSE]
+```
+
+
+```{r}
+plot_df <- as.data.frame(target_data) %>%
+  rownames_to_column("Gene") %>%
+  pivot_longer(cols= -Gene, names_to = "Sample", values_to = "logCPM") %>%
+  left_join(metadata, by = "Sample")
+```
+
+```{r}
+font_choice <- "Arial"
+```
+
+
+```{r}
+# Violin + Boxplot
+# MALT Gene Expression Across Tissues
+# Each panel = one BioProject; x-axis = gene; points = individual
+# samples coloured by Tissue to reveal Tissue structure
+
+p1 <- ggplot(plot_df, aes(x = Gene, y = logCPM)) +
+  
+  # Violin layer shows the full expression distribution per gene
+  geom_violin(aes(fill = Gene), alpha = 0.3, scale = "width") +
+  
+  # Box layer shows median and IQR; outliers hidden (shown via jitter)
+  geom_boxplot(aes(fill = Gene), alpha = 0.7, width = 0.3,
+               outlier.shape = NA, linewidth = 0.3) +
+  
+  # Individual samples coloured by Tissue
+  geom_jitter(aes(color = Tissue), width = 0.15, size = 2.5, alpha = 0.8) +
+  
+  # One panel per BioProject, free y-scale so dynamic ranges differ
+  facet_wrap(~ Bioproject, scales = "free_y", nrow = 1) +
+  
+  scale_fill_viridis(discrete = TRUE, option = "D", name = "Gene") +
+  scale_color_brewer(palette = "Set1", name = "Tissue") +
+  
+  labs(
+    y = "Log2 CPM", x = NULL
+  ) +
+   
+  theme_bw(base_family = font_choice) +
+  theme(
+    strip.text      = element_text(face = "bold.italic", size = 12),
+    axis.text.x     = element_text(angle = 45, hjust = 1, size = 10, face = "bold"),
+    legend.position = "right"
+  )
+
+ggsave("Boxplot_Violin.png", plot = p1, width = 14, height = 7, dpi = 300)
+
+print(p1)
+```
+
+
+```{r}
+# Heatmap 
+
+# Column annotation 
+annotation_col <- data.frame(
+  Tissue     = metadata$Tissue,
+  Bioproject = metadata$Bioproject,
+  row.names  = metadata$Sample
+)
+
+# Define Heatmap colours
+ann_colors <- list(
+  Bioproject = c(
+    "PRJNA1064938" = "#72C6AB",   
+    "PRJNA1092638" = "#FC8D62",   
+    "PRJNA1203284" = "#8DA0CB",   
+    "PRJNA1203607" = "#E78AC3"    
+  ),
+  Tissue = c(
+    "Muscle"      = "#440154",   
+    "Liver"       = "#3B528B",   
+    "Head_Kidney"  = "#21908C",    
+    "Spleen"      = "#5DC863",    
+    "Gill"        = "#FDE725"     
+  )
+)
+
+# Draw heatmap
+# Rows scaled to Z-scores so expression patterns are compareable across genes
+# columns clustered with Ward linkage
+
+p2 <- pheatmap(
+  mat                  = target_data,
+  scale                = "row", # Z-score per gene
+  annotation_col       = annotation_col,
+  annotation_colors    = ann_colors,
+
+  # Diverging blue-red palette
+  color  = colorRampPalette(rev(brewer.pal(11, "RdBu")))(200),
+  breaks = seq(-2.5, 2.5, length.out = 201),
+  
+  # Hierarchical clustering settings
+   clustering_distance_rows = "euclidean",
+  clustering_distance_cols = "euclidean",
+  clustering_method        = "ward.D2",
+  
+  # Display options
+  fontsize_row   = 13,
+  fontsize_col   = 9,
+  angle_col      = 45,
+  fontsize       = 11,
+  border_color   = "grey92",
+  cellwidth      = 18,
+  cellheight     = 30,
+  
+  # Legend with labelled breaks
+  legend_breaks  = c(-2, -1, 0, 1, 2),
+  legend_labels  = c("-2 (Low)", "-1", "0", "+1", "+2 (High)")
+)
+
+# Save to file
+png("Heatmap.png", width = 12, height = 7, units = "in", res = 300)
+    grid.newpage()
+    grid.draw(p2$gtable)
+dev.off()
+```
+
+
+```{r}
+# Bubble Plot
+
+summary_df <- plot_df %>%
+  group_by(Tissue, Gene) %>%
+  summarise(Mean_Expression = mean(logCPM),.groups = "drop")
+
+p3 <- ggplot(summary_df, aes(x = Tissue, y = Gene)) +
+  
+  geom_point(aes(size = Mean_Expression, fill = Mean_Expression),
+             shape = 21, # filled circle with a visible border
+             color = "black", stroke = 0.5) +
+  
+  scale_fill_viridis(option = "magma", direction = -1, name = "Mean\nLog2 CPM") +
+  scale_size(range = c(4, 12), name = "Expression\nLevel") +
+  
+  labs(title = "Mean Expression Summary", x = NULL, y = NULL) +
+  
+  theme_bw(base_family = font_choice) +
+  
+  theme(
+    plot.title  = element_text(face = "bold", size = 14, hjust = 0.5),
+    axis.text.x = element_text(angle = 45, hjust = 1, size = 11, face = "bold"),
+    axis.text.y = element_text(face = "bold.italic", size = 12),
+    legend.box  = "vertical"
+  )
+
+
+print(p3)
+
+ggsave("Dotplot.png", plot = p3, width = 9, height = 6, dpi = 300)
+
+```
+
+```{r}
+sessionInfo()
+```
+
+
+
