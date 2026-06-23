@@ -29,3 +29,7 @@ Control samples from Bioproject PRJNA1083917 (GEO ID: GSE260891) selected for an
 | SRR28227295 | Ctrl 1    |
 | SRR28227293 | Ctrl 2    |
 
+# Citation
+Patil, A., Müller-Eigner, A., Rebl, H., Goldammer, T., & Rebl, A. (2026). 
+The rule of three: Structural diversity, differential expression and distinct regulatory output of three MALT paralogues in salmonid fish.
+Fish & Shellfish Immunology, 175, 11139
